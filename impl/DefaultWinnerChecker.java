@@ -142,7 +142,8 @@ public class DefaultWinnerChecker implements WinnerChecker {
 			return newImmutableDataSet((Cell[])list.toArray());
 		}
 		public static <Cell> List<Cell> newImmutableDataSet(final Cell[] array) {
-			return new ArrayList<Cell>();
+			List<Cell> list = Arrays.asList(array);
+			return list;
 		}
 	}
 }
