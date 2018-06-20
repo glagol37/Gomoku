@@ -1,9 +1,5 @@
 package gomoku.game.gomoku;
-/**
- * 
- * @author devstudy
- * @see http://devstudy.net
- */
+
 public enum CellValue {
 
 	EMPTY(' '),

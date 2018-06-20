@@ -1,10 +1,6 @@
 package gomoku.game.gomoku;
 
-/**
- * 
- * @author devstudy
- * @see http://devstudy.net
- */
+
 public interface GameTable {
 
 	CellValue getValue(int row, int col);

@@ -1,9 +1,5 @@
 package gomoku.game.gomoku;
-/**
- * 
- * @author devstudy
- * @see http://devstudy.net
- */
+
 public class Cell {
 	private final int rowIndex;
 	private final int colIndex;
