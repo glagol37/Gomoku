@@ -1,4 +1,4 @@
-package gomoku.impl;
+package game.gomoku.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +13,9 @@ import gomoku.game.gomoku.GameTable;
 public class DefaultComputerTurn implements ComputerTurn {
 	private GameTable gameTable;
 	private int winCount = DefaultConstants.WIN_COUNT;
+	
+
+
 	
 	public void setGameTable(GameTable gameTable) {
 		Objects.requireNonNull(gameTable, "Game table can't be null");

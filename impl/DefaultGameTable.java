@@ -1,5 +1,4 @@
-package gomoku.impl;
-
+package game.gomoku.impl;
 import gomoku.game.gomoku.CellValue;
 import gomoku.game.gomoku.GameTable;
 

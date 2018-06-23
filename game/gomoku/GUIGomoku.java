@@ -17,12 +17,13 @@ import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 
-import gomoku.impl.DefaultComputerTurn;
-import gomoku.impl.DefaultGameTable;
-import gomoku.impl.DefaultHumanTurn;
-import gomoku.impl.DefaultWinnerChecker;
+import game.gomoku.impl.DefaultComputerTurn;
+import game.gomoku.impl.DefaultGameTable;
+import game.gomoku.impl.DefaultHumanTurn;
+import game.gomoku.impl.DefaultWinnerChecker;
 
 public class GUIGomoku extends JFrame {
+	
 	private static final long serialVersionUID = 1714372457079337160L;
 	private final JLabel cells[][];
 	private final GameTable gameTable;
@@ -131,7 +132,7 @@ public class GUIGomoku extends JFrame {
 		if (gameTable.isCellFree(row, col)) {
 			Cell humanCell = humanTurn.makeTurn(row, col);
 			drawCellValue(humanCell);
-			WinnerResult winnerResult = winnerChecker.isWinnerFound(CellValue.HUMAN);
+			WinnerResult winnerResult = winnerChecker.isWinnerFound(CellValue.HUMAN, humanCell);
 			if (winnerResult.winnerExists()) {
 				markWinnerCells(winnerResult.getWinnerCells());
 				handleGameOver("Game over: User win!\nNew game?");
@@ -143,7 +144,7 @@ public class GUIGomoku extends JFrame {
 			}
 			Cell compCell = computerTurn.makeTurn();
 			drawCellValue(compCell);
-			winnerResult = winnerChecker.isWinnerFound(CellValue.COMPUTER);
+			winnerResult = winnerChecker.isWinnerFound(CellValue.COMPUTER, compCell);
 			if (winnerResult.winnerExists()) {
 				markWinnerCells(winnerResult.getWinnerCells());
 				handleGameOver("Game over: Computer wins!\nNew game?");

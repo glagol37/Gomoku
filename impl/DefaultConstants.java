@@ -1,5 +1,4 @@
-package gomoku.impl;
-
+package game.gomoku.impl;
 
 class DefaultConstants {
 	static final int SIZE = 15;

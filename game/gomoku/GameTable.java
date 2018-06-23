@@ -1,6 +1,5 @@
 package gomoku.game.gomoku;
 
-
 public interface GameTable {
 
 	CellValue getValue(int row, int col);

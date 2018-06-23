@@ -1,5 +1,4 @@
-package gomoku.impl;
-
+package game.gomoku.impl;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
